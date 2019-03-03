@@ -1,0 +1,26 @@
+nav.navbar,
+.navbar-default {
+  background-color: #311505 !important;
+}
+
+.navbar-light .navbar-brand {
+  color: white;
+}
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.9rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  padding-left: 15%;
+}
