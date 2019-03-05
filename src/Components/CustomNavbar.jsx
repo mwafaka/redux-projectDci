@@ -14,9 +14,7 @@ export default class CustomNavbar extends Component {
     return (
       <div>
         <Navbar bg="light" variant="light">
-          <Navbar.Brand className="whitecolor" to="/">
-            Feed me
-          </Navbar.Brand>
+          <Navbar.Brand to="/">Feed me</Navbar.Brand>
           <Nav className="mr-auto">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>

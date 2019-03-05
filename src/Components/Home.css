@@ -15,5 +15,18 @@
 }
 .kleine {
   width: 100%;
-  padding-bottom: 10%;
+  /* height: 200; */
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  margin-bottom: 5%;
+  /* z-index: -5000; */
+  /* background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  /* padding-bottom: 10%;
+  padding-top: 0.1%;
+  object-fit: cover; */
 }
