@@ -1,37 +1,58 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchPosts } from "../action/postFood";
-import { Col, Image, Row, Card, Button, CardDeck } from "react-bootstrap";
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+  Badge
+} from "reactstrap";
 import "./HomeSearch.css";
-import { Link } from "react-router-dom";
+
 class HomeSearch extends Component {
   componentDidMount() {
     this.props.fetchPosts();
   }
+
   render() {
     const { matches } = this.props.posts;
-    console.log(matches);
-    return matches ? (
+
+    const foodList = matches ? (
       matches.map(match => (
-        <Card className="float-left styling" style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={match.smallImageUrls} />
-          <Card.Body>
-            <Card.Title>{match.recipeName}</Card.Title>
-            <Card.Text>
-              <h5>Ingredients :</h5>
-              <ul>
-                {match.ingredients.map((ing, i) => (
-                  <li key={i}>{ing}</li>
+        <div key={match.id} className="col-md-4 mb-auto">
+          <Card>
+            <CardImg top src={match.smallImageUrls} alt="Card image cap" />
+            <CardBody>
+              {/* <CardTitle text="danger">Rating: {match.rating}</CardTitle> */}
+              <Badge color="success">Rating: {match.rating}</Badge>
+              <br />
+              <Badge color="primary">{match.recipeName}</Badge>
+              {/* <CardSubtitle>{match.recipeName}</CardSubtitle> */}
+              <CardText>
+                <p>Ingredient:</p>
+                {match.ingredients.map((x, i) => (
+                  <ul key={i}>
+                    <li>{x}</li>
+                  </ul>
                 ))}
-                <h7 className="red"> Rating: {match.rating}</h7>
-              </ul>
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
+              </CardText>
+              <Button color="danger">Button</Button>
+            </CardBody>
+          </Card>
+        </div>
       ))
     ) : (
       <div>Loading...</div>
+    );
+
+    return (
+      <div className="container">
+        <div className="row">{foodList}</div>
+      </div>
     );
   }
 }

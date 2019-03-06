@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import { Row, Col, Image } from "react-bootstrap";
 import HomeSearch from "../Components/HomeSearch";
+
+import { connect } from "react-redux";
+import { fetchPosts } from "../action/postFood";
+import SearchBar from "./SearchBar";
 import "./Home.css";
 class Home extends Component {
-  // componentDidMount() {
-  //   console.log("component did mount");
-  //   this.props.fetchPosts();
-  // }
+  search = term => {
+    this.props.fetchPosts(term);
+  };
+
   render() {
     return (
       <React.Fragment>
         <div>
-          <container>
+          <section>
             <Image src="img/6.jpeg" className="kleine" />
-
+            <SearchBar onSearchTerm={this.search} />
             <Row className="show-grid text-center">
               <Col xs={12} sm={4} className="person-wrapper">
                 <Image src="img/2.jpeg" roundedCircle className="profile-pic" />
@@ -46,21 +50,21 @@ class Home extends Component {
                 </p>
               </Col>
             </Row>
-          </container>
+          </section>
         </div>
         <br />
+
         <HomeSearch />
       </React.Fragment>
     );
   }
 }
-// const mapStateToProps = state => ({
-//   posts: state.items
-// });
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     fetchPosts: () => dispatch(fetchPosts())
-//   };
-// };
 
-export default Home;
+const mapDispatchToProps = {
+  fetchPosts
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Home);

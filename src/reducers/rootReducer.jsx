@@ -1,7 +1,8 @@
 import { FETCH_POSTS } from "../action/types";
 
 const initialState = {
-  items: []
+  items: [],
+  searchTerm: ""
 };
 export default function rootReducer(state = initialState, action) {
   switch (action.type) {
@@ -10,6 +11,7 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         items: action.payload
       };
+
     default:
       return state;
   }

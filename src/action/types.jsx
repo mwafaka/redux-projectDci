@@ -1,1 +1,2 @@
 export const FETCH_POSTS = "FETCH_POSTS";
+export const SEARCH_INPUT_CHANGED = "SEARCH_INPUT_CHANGED";
