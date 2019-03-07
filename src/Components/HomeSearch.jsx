@@ -27,11 +27,10 @@ class HomeSearch extends Component {
           <Card>
             <CardImg top src={match.smallImageUrls} alt="Card image cap" />
             <CardBody>
-              {/* <CardTitle text="danger">Rating: {match.rating}</CardTitle> */}
               <Badge color="success">Rating: {match.rating}</Badge>
               <br />
               <Badge color="primary">{match.recipeName}</Badge>
-              {/* <CardSubtitle>{match.recipeName}</CardSubtitle> */}
+
               <CardText>
                 <p>Ingredient:</p>
                 {match.ingredients.map((x, i) => (

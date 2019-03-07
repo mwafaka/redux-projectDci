@@ -18,7 +18,7 @@ export default class CustomNavbar extends Component {
           <Nav className="mr-auto">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/news">News</Link>
+            <Link to="/news">Adding</Link>
           </Nav>
         </Navbar>
       </div>
