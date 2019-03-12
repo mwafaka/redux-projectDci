@@ -11,7 +11,7 @@
 }
 .card-img-top {
   width: 100%;
-  height: auto;
+  height: 250px;
   object-fit: fill;
 }
 .card {
@@ -19,4 +19,11 @@
   float: left;
   margin: 4px auto;
   padding: 5%;
+  /* max-height: 50em; */
+}
+/* .card-text {
+  max-height: 50em;
+} */
+.style1 {
+  width: 90%;
 }

@@ -26,16 +26,20 @@ class HomeSearch extends Component {
         <div key={match.id} className="col-md-4 mb-auto">
           <Card>
             <CardImg top src={match.smallImageUrls} alt="Card image cap" />
-            <CardBody>
-              <Badge color="success">Rating: {match.rating}</Badge>
+            <CardBody top width="100%">
+              <Badge color="success" className="style1">
+                Rating: {match.rating}
+              </Badge>
               <br />
-              <Badge color="primary">{match.recipeName}</Badge>
+              <Badge color="primary" className="style1">
+                {match.recipeName}
+              </Badge>
 
               <CardText>
                 <p>Ingredient:</p>
                 {match.ingredients.map((x, i) => (
-                  <ul key={i}>
-                    <li>{x}</li>
+                  <ul className="ulc" key={i}>
+                    <li className="ull">{x}</li>
                   </ul>
                 ))}
               </CardText>
