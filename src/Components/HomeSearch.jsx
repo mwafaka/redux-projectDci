@@ -34,7 +34,6 @@ class HomeSearch extends Component {
               <Badge color="primary" className="style1">
                 {match.recipeName}
               </Badge>
-
               <CardText>
                 <p>Ingredient:</p>
                 {match.ingredients.map((x, i) => (

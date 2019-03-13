@@ -19,11 +19,14 @@
   float: left;
   margin: 4px auto;
   padding: 5%;
-  /* max-height: 50em; */
+  min-height: 50em;
 }
 /* .card-text {
   max-height: 50em;
 } */
 .style1 {
   width: 90%;
+  overflow-wrap: break-word;
+  /* word-wrap: break-word; */
+  hyphens: auto;
 }
